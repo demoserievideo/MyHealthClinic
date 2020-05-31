@@ -15,5 +15,9 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       
-    - name: Restore
+    - name: Dotnet Restore
       run: dotnet restore MHC_ASPNetCore.sln
+      
+    - name: NPM Install Bower
+      run: npm install -g bower
+      working-directory: 'src/MyHealth.Web'
