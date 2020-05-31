@@ -28,3 +28,7 @@ jobs:
     - name: NPM Install 
       run: npm install 
       working-directory: 'src/MyHealth.Web'
+      
+    - name: Install bower Packages
+      run: bower install 
+      working-directory: 'src/MyHealth.Web/bower.json'
