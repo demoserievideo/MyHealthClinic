@@ -17,4 +17,4 @@ jobs:
       
     - name: Restore
       run: dotnet restore
-
+      working-directory: ./src
