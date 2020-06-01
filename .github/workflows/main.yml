@@ -38,9 +38,11 @@ jobs:
     - name: Dotnet Publish
       run: dotnet publish MHC_ASPNetCore.sln --configuration Release -o netcore 
       
-    - uses: montudor/action-zip@v0.1.0
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v1
       with:
-        args: zip -qq -r MyHealthClinic/MyHealthClinic/publish.zip MyHealthClinic/MyHealthClinic/netcore/
+        name: artifact
+        path: /home/runner/work/MyHealthClinic/MyHealthClinic/netcore/
       
       
       
