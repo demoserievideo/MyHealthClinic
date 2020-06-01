@@ -38,3 +38,9 @@ jobs:
     - name: Dotnet Publish
       run: dotnet publish MHC_ASPNetCore.sln --configuration Release -o netcore 
       
+    - uses: montudor/action-zip@v0.1.0
+      with:
+        args: zip -qq -r /home/runner/work/MyHealthClinic/MyHealthClinic/publish.zip /home/runner/work/MyHealthClinic/MyHealthClinic/netcore/
+      
+      
+      
