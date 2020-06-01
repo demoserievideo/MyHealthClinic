@@ -32,3 +32,6 @@ jobs:
     - name: Build with dotnet
       run: dotnet build MHC_ASPNetCore.sln --configuration Release
       
+    - name: DotNet Test
+      run: dotnet test MHC_ASPNetCore.sln --configuration Release --logger:trx;logfilename=TEST.xml
+      
