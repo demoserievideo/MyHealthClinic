@@ -29,6 +29,6 @@ jobs:
       run: npm install 
       working-directory: 'src/MyHealth.Web'
       
-    - name: Install bower Packages
-      run: bower install bower.json
-      working-directory: 'src/MyHealth.Web/'
+    - name: Build with dotnet
+      run: dotnet build MHC_ASPNetCore.sln --configuration Release
+      
