@@ -35,3 +35,6 @@ jobs:
     - name: DotNet Test
       run: dotnet test MHC_ASPNetCore.sln --configuration Release --logger:trx;logfilename=TEST.xml
       
+    - name: Dotnet Publish
+      run: dotnet publish --configuration Release -o netcore 
+      
